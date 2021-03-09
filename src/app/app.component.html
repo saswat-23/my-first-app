@@ -1,11 +1,22 @@
-testing started...
+appComponent started...
+<br><br><br>
 
-<app-warningAlert></app-warningAlert>
-<app-successAlert></app-successAlert>
-<!-- <app-info-alert></app-info-alert> -->
-<div id='app-info-alert'></div>
+<!-- <div><b>Allow New Server Status:</b> {{allowedNewServer}}</div>
 
-<div><b>Allow New Server Status:</b> {{allowedNewServer}}</div>
+<app-server></app-server> -->
+
+<!-- <label>Server Name</label>
+<input type="text" class="form-control"
+(input)="onServerNameUpdate($event)"
+> -->
+<br>
+<label>Server Name</label>
+<input type="text"
+[(ngModel)]="serverName"
+>
+
+<!-- <p>{{serverName}}</p> -->
+
 
 <button class='btn btn-primary' 
 [disabled]="!allowedNewServer"
@@ -13,18 +24,6 @@ testing started...
 
 <p>{{serverCreationStatus}}</p>
 
-<app-server></app-server>
 
-<label>Server Name</label>
-<input type="text" class="form-control"
-(input)="onServerNameUpdate($event)"
->
-
-<label>Server Name</label>
-<input type="text" class="form-control"
-[(ngModel)]="serverName"
->
-
-<p>{{serverName}}</p>
-
-testing END...
+<br><br><br>
+appComponent END...
