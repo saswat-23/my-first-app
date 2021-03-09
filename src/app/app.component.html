@@ -5,10 +5,13 @@ testing started...
 <!-- <app-info-alert></app-info-alert> -->
 <div id='app-info-alert'></div>
 
+<div><b>Allow New Server Status:</b> {{allowedNewServer}}</div>
 
-<button class='btn btn-primary' [disabled]="allowedNewServer">Add Server</button>
+<button class='btn btn-primary' 
+[disabled]="!allowedNewServer"
+(click)="onCreateServer()">Add Server</button>
 
-{{allowedNewServer}}
+<p>{{serverCreationStatus}}</p>
 
 <app-server></app-server>
 <app-server></app-server>
