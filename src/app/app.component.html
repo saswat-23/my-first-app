@@ -19,6 +19,12 @@ testing started...
 <input type="text" class="form-control"
 (input)="onServerNameUpdate($event)"
 >
+
+<label>Server Name</label>
+<input type="text" class="form-control"
+[(ngModel)]="serverName"
+>
+
 <p>{{serverName}}</p>
 
 testing END...
