@@ -1,0 +1,31 @@
+
+<div class='container'>
+
+    <h2>Assignment 3</h2>
+
+    <input type='button' value='Display Details' class='btn btn-info'
+    (click)="onBtnClick()"
+    >
+    <p [hidden]="paraHideStatus">Hello! Secret pwd is: N@nd!MunD!</p>
+
+    <div>
+        <p *ngFor = "let log of logArr, let i=index" >
+
+            <span *ngIf = "i>3; else xyz;">
+                ABC
+            </span>
+            <ng-template #xyz>
+                XYZ
+            </ng-template>
+            
+
+            <!-- <span [ngStyle]="{backgroundColor:(i > 3 ? 'blue':'red')}"
+                  [ngClass]="{tColor:i > 3}"
+            >
+                  {{log}}
+            </span>     -->
+        </p>
+    </div>
+
+
+</div>
